@@ -1,7 +1,7 @@
 contacts: [
   {
       name: 'Michele',
-      avatar: './img/avatar_1.png',
+      avatar: 'https://bootdey.com/img/Content/avatar/avatar1.png',
       visible: true,
       messages: [
           {
@@ -23,7 +23,7 @@ contacts: [
   },
   {
       name: 'Fabio',
-      avatar: './img/avatar_2.png',
+      avatar: 'https://bootdey.com/img/Content/avatar/avatar2.png',
       visible: true,
       messages: [
           {
@@ -45,7 +45,7 @@ contacts: [
   },
   {
       name: 'Samuele',
-      avatar: './img/avatar_3.png',
+      avatar: 'https://bootdey.com/img/Content/avatar/avatar4.png',
       visible: true,
       messages: [
           {
@@ -67,7 +67,7 @@ contacts: [
   },
   {
       name: 'Alessandro B.',
-      avatar: './img/avatar_4.png',
+      avatar: 'https://bootdey.com/img/Content/avatar/avatar5.png',
       visible: true,
       messages: [
           {
@@ -84,7 +84,7 @@ contacts: [
   },
   {
       name: 'Alessandro L.',
-      avatar: './img/avatar_5.png',
+      avatar: 'https://bootdey.com/img/Content/avatar/avatar6.png',
       visible: true,
       messages: [
           {
@@ -101,7 +101,7 @@ contacts: [
   },
   {
       name: 'Claudia',
-      avatar: './img/avatar_6.png',
+      avatar: 'https://bootdey.com/img/Content/avatar/avatar7.png',
       visible: true,
       messages: [
           {
@@ -123,7 +123,7 @@ contacts: [
   },
   {
       name: 'Federico',
-      avatar: './img/avatar_7.png',
+      avatar: 'https://bootdey.com/img/Content/avatar/avatar8.png',
       visible: true,
       messages: [
           {
@@ -140,7 +140,7 @@ contacts: [
   },
   {
       name: 'Davide',
-      avatar: './img/avatar_8.png',
+      avatar: 'https://bootdey.com/img/Content/avatar/avatar9.png',
       visible: true,
       messages: [
           {
