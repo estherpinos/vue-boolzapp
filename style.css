@@ -35,6 +35,14 @@ body{
   background-color: #EAEAEA;
 }
 
+/* AVATAR UTENTE */
+.avatar-esther{
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+
+}
+
 /* CHATS */
 .chats{
   width: 60%;
