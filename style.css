@@ -42,7 +42,7 @@ body{
 }
 
 /* AVATAR UTENTE */
-.avatar-esther{
+.avatar{
   width: 30px;
   height: 30px;
   border-radius: 100%;
@@ -65,6 +65,16 @@ body{
 .search-bar p{
   font-size: 12px;
   color:#B1B1B1 ;
+}
+
+/* UTENTI */
+.user-row{
+  height: 50px;
+  border: 1px solid lightblue;
+}
+
+.user-row .ultimo-messaggio{
+  font-size: 10px;
 }
 
 /* CHATS */

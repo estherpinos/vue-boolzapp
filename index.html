@@ -21,7 +21,7 @@
 </head>
 <body>
   
-  <main>
+  <main id="app">
     <!-- BAR GREEN BACKGROUND -->
     <div class="green position-relative "></div>
     <!-- APP -->
@@ -31,7 +31,7 @@
         <div class="bar-utente d-flex justify-content-between px-2">
           <!-- PROFILO:AVATAR AND NAME -->
           <div class="profilo d-flex align-items-center ">
-            <img src="https://bootdey.com/img/Content/avatar/avatar3.png" class="avatar-esther" alt="">
+            <img src="https://bootdey.com/img/Content/avatar/avatar3.png" class="avatar" alt="">
             <p class="m-0 px-2 ">Esther Pinos</p>
           </div>
           <!-- MENU ICONS -->
@@ -46,6 +46,17 @@
         <div class="search-bar d-flex align-items-center px-2 ">
           <i class="fa-solid fa-magnifying-glass pe-2" style="color: #B1B1B1;"></i>
           <p class=" m-0 ps-2 ">Cerca o inizia una nuova chat</p>
+        </div>
+
+        <!-- UTENTI -->
+        <div class="user-row w-100 d-flex align-items-center " v-for="(contact,index) in contacts">
+          <div class="d-flex"><img class="avatar ms-2 " :src="contact.avatar" alt=""></div>
+          <div class="d-flex align-items-start flex-column">
+            <p class="ps-2 m-0">{{contact.name}}</p>
+            <p class="ps-2 m-0  ultimo-messaggio">{{contact.messages[contact.messages.length-1].message}}</p>
+          </div>
+          
+
         </div>
       </div>
 
