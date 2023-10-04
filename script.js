@@ -143,6 +143,8 @@ createApp({
                     status: 'received'
                 }
             ],
+
+            
         },
         {
             name: 'Davide',
@@ -166,17 +168,19 @@ createApp({
                 }
             ],
         }
-      ]
+      ],
+      activeContact: -1
 
     }
   },
   methods:{
 
+    clickChat(index){
+      this.activeContact=index;
+    }
   },
 
-  created(){
-    this.activeContact = this.contacts;
-  },
+
 
 
   mounted(){

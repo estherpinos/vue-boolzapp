@@ -70,9 +70,9 @@
 
         <div class="chat-list">
           <div 
-          class="contact w-100 d-flex align-items-center " v-for="contact in contacts" 
-          :class="{'active' : contact === activeContact}"
-          @click="activeContact = contact">
+          class="contact w-100 d-flex align-items-center " v-for="(contact, index) in contacts" 
+          :class="{'active' : index === activeContact}"
+          @click="clickChat(index)">
   
           <!-- Image profilo -->
             <div class="d-flex">
