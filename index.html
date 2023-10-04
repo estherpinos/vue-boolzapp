@@ -73,6 +73,15 @@
           </div>
 
         </div>
+
+        <div v-for="(message, index) in messages" :key="index" :class="{ 'my-message': message.from === 'Me' }">
+          {{ message.message }}
+        </div>
+        <div class="message-bar position-fixed bottom-0 p-2 ">
+          <i class="fa-regular fa-face-smile" style="color: #A8B2B7 ;"></i>
+          <input type="text" placeholder="Scrive un messaggio" class="mx-5 ">
+          <i class="fa-solid fa-microphone" style="color: #A8B2B7;"></i>
+        </div>
       </div>
     </div>
   </main>

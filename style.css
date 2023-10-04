@@ -77,10 +77,26 @@ body{
   font-size: 10px;
 }
 
-/* CHATS */
+/*********** CHATS **************/
 .chats{
   width: 60%;
   height: 100%;
+}
+
+.message-bar{
+  background-color: #F4EEEA;
+  width: 60%;
+  height: 40px;
+}
+
+.message-bar input{
+  width: 80%;
+  border: none;
+}
+
+.message-bar input:focus{
+  border: none;
+  outline: none;
 }
 
 /* MESSAGE UTENTE */
