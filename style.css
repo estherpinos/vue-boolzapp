@@ -102,7 +102,9 @@ body{
   background-color: #E5DDD5;
 }
 
-
+.box-messaggio{
+  width: 100%;
+}
 
 .message-bar{
   background-color: #F4EEEA;
@@ -129,6 +131,7 @@ body{
   
   
 }
+
 
 .message-other{
   background-color: #FFFFFF;

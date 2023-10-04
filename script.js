@@ -2,6 +2,7 @@ const {createApp} = Vue;
 
 
 
+
 createApp({
   data(){
     return{
@@ -177,6 +178,7 @@ createApp({
       ultimoAccesso: " ",
       imageSelezionata:" ",
       message:"",
+      date:" ",
       search:""
 
     }
@@ -193,14 +195,13 @@ createApp({
     }, 
 
     addMessage(){
-      object={
-        date: '10/01/2020 15:51:00',
-        message: this.message,
-        status: 'send'
+      if ((this.message !== '') && (this.message.length !== 0)) {
+        newMessageAdd = {message: this.message, status: 'sent' };
+        this.contacts[this.activeContact].messages.push(newMessageAdd);
+        this.message = ''
+    };
 
-      };
-      this.contacts[this.activeContact].messages.push(object);
-      this.message="";
+       setTimeout(this.messageReceived, 1000);
       
   
     },
