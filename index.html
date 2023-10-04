@@ -62,7 +62,8 @@
         <!-- SEARCH BAR -->
         <div class="search-bar d-flex align-items-center px-2 ">
           <i class="fa-solid fa-magnifying-glass pe-2" style="color: #B1B1B1;"></i>
-          <input type="text" placeholder="Cerca o inizia una nuova chat" class="border-0 w-100 ">
+          <input type="text" @keyup="searchChat"
+          v-model="search" placeholder="Cerca o inizia una nuova chat" class="border-0 w-100 ">
           
         </div>
 
@@ -70,12 +71,15 @@
 
         <div class="chat-list">
           <div 
-          class="contact w-100 d-flex align-items-center " v-for="(contact, index) in contacts" 
+          class="" 
+          v-for="(contact, index) in contacts" 
           :class="{'active' : index === activeContact}"
-          @click="clickChat(contact, index)">
+          @click="clickChat(contact, index)"
+          >
   
-          <!-- Image profilo -->
-            <div class="d-flex">
+          <div class=" contact w-100 d-flex align-items-center" v-show="contact.visible">
+             <!-- Image profilo -->
+             <div class="d-flex">
               <img class="avatar ms-2 " :src="contact.avatar" alt="">
             </div>
   
@@ -84,6 +88,8 @@
               <p class="ps-2 m-0">{{contact.name}}</p>
               <p class="ps-2 m-0  ultimo-messaggio">{{contact.messages[contact.messages.length-1].message}}</p>
             </div>
+          </div>
+         
             
   
           </div>

@@ -149,7 +149,7 @@ createApp({
         {
             name: 'Davide',
             avatar: 'https://bootdey.com/img/Content/avatar/avatar8.png',
-            visible: true,
+            visible: false,
             messages: [
                 {
                     date: '10/01/2020 15:30:55',
@@ -174,7 +174,8 @@ createApp({
       nomeSelezionato: " ",
       ultimoAccesso: " ",
       imageSelezionata:" ",
-      message:""
+      message:"",
+      search:""
 
     }
   },
@@ -190,12 +191,27 @@ createApp({
     }, 
 
     addMessage(){
-      console.log(this.message);
       object={
-        
+        date: '10/01/2020 15:51:00',
+        message: 'OK!!',
+        status: 'received'
+
       };
       this.contacts[this.activeContact].messages.push(object);
-    }
+    },
+
+    searchChat(){
+      this.contacts.forEach(contact => {
+        if(contact.name.toLowerCase().includes(this.search.toLowerCase())){
+          contact.visible = true;
+
+        } else{
+          contact.visible = false
+        }
+      });
+      console.log(this.search);
+
+    },
 
 
   },
