@@ -94,11 +94,13 @@ body{
   font-size: 10px;
 }
 
+
 /*********** CHATS **************/
 .chats{
   width: 60%;
   height: 100%;
 }
+
 
 .message-bar{
   background-color: #F4EEEA;

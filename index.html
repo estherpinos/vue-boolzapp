@@ -93,22 +93,21 @@
 
       <!-- CHATS -->
       <div class="chats bg-white ">
-        <div class="bar-utente bordo-left d-flex justify-content-between px-2">
+        <div class="bar-utente bordo-left px-2 d-flex align-items-center ">
           <div class="avatar-bar"></div>
 
-          <!-- MENU ICONS -->
-          <div class="menu-chat d-flex align-items-center px-2 ">
+          <div class="menu-chat px-2 w-100 ">
 
               <!-- profilo della persona con chat attiva -->
-              <div v-if="chatSelezionata" class="opened-chat">
-                <div class="avatar-bar d-flex ">
+              <div v-if="chatSelezionata" class="opened-chat d-flex align-items-center  justify-content-between w-100 h-100  ">
+                <div class="avatar-bar d-flex  ">
                   <div class="profilo d-flex  align-items-center ">
-                    <img :src="imageSelezionata" class="avatar" alt="">
+                    <img :src="imageSelezionata" class="avatar me-3 " alt="">
 
-                    <div class="d-flex flex-column  align-items-center ">
-                      <p class="m-0 px-3 " style="font-size: 14px;">{{nomeSelezionato}}
+                    <div class="d-flex flex-column  m-0 ">
+                      <p class="m-0 " style="font-size: 14px;">{{nomeSelezionato}}
                       </p>
-                      <p class="text-muted m-0 px-3 " style="font-size: 12px;">Ultimo accesso {{ultimoAccesso}}</p>
+                      <p class="text-muted m-0 " style="font-size: 12px;">Ultimo accesso {{ultimoAccesso}}</p>
 
                     </div>
                   </div>
