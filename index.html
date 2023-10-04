@@ -77,7 +77,7 @@
           @click="clickChat(contact, index)"
           >
   
-          <div class=" contact w-100 d-flex align-items-center" v-show="contact.visible">
+          <div class=" contact w-100 d-flex align-items-center" v-if="contact.visible">
              <!-- Image profilo -->
              <div class="d-flex">
               <img class="avatar ms-2 " :src="contact.avatar" alt="">
