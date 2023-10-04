@@ -169,15 +169,35 @@ createApp({
             ],
         }
       ],
-      activeContact: -1
+      activeContact: -1,
+      chatSelezionata: false,
+      nomeSelezionato: " ",
+      ultimoAccesso: " ",
+      imageSelezionata:" ",
+      message:""
 
     }
   },
   methods:{
 
-    clickChat(index){
+    clickChat(contact, index){
       this.activeContact=index;
+      this.chatSelezionata = true;
+      this.nomeSelezionato= contact.name;
+      this.imageSelezionata= contact.avatar;
+      
+
+    }, 
+
+    addMessage(){
+      console.log(this.message);
+      object={
+        
+      };
+      this.contacts[this.activeContact].messages.push(object);
     }
+
+
   },
 
 

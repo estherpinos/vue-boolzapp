@@ -72,7 +72,7 @@
           <div 
           class="contact w-100 d-flex align-items-center " v-for="(contact, index) in contacts" 
           :class="{'active' : index === activeContact}"
-          @click="clickChat(index)">
+          @click="clickChat(contact, index)">
   
           <!-- Image profilo -->
             <div class="d-flex">
@@ -100,21 +100,30 @@
           <div class="menu-chat d-flex align-items-center px-2 ">
 
               <!-- profilo della persona con chat attiva -->
-              <div class="opened-chat">
-                <!-- <img class="avatar ms-2 " :src="contacts[activeChat].avatar" alt=""> -->
+              <div v-if="chatSelezionata" class="opened-chat">
+                <div class="avatar-bar d-flex ">
+                  <div class="profilo d-flex  align-items-center ">
+                    <img :src="imageSelezionata" class="avatar" alt="">
+
+                    <div class="d-flex flex-column  align-items-center ">
+                      <p class="m-0 px-3 " style="font-size: 14px;">{{nomeSelezionato}}
+                      </p>
+                      <p class="text-muted m-0 px-3 " style="font-size: 12px;">Ultimo accesso {{ultimoAccesso}}</p>
+
+                    </div>
+                  </div>
+                </div>
                 
-                <div v-if="selectedName" class="selected-name">
-                  <h1>{{ selectedName }}</h1>
+                
+                <div class="icons-bar-chat">
+                  <i class="fa-solid fa-magnifying-glass pe-2 " style="color: #B1B1B1;">
+                  </i>
+                  <i class="fa-solid fa-paperclip px-2 " style="color: #B1B1B1;" ></i>
+                  <i class="fa-solid fa-ellipsis-vertical ps-2" style="color: #B1B1B1;">
+                  </i>
                 </div>
               </div>
 
-              <div class="icons-bar-chat">
-                <i class="fa-solid fa-magnifying-glass pe-2 " style="color: #B1B1B1;">
-                </i>
-                <i class="fa-solid fa-paperclip px-2 " style="color: #B1B1B1;" ></i>
-                <i class="fa-solid fa-ellipsis-vertical ps-2" style="color: #B1B1B1;">
-                </i>
-              </div>
            
           </div>
 
@@ -122,9 +131,9 @@
 
        <!-- INVIA UN MESSAGGIO BAR -->
        
-        <div class="message-bar position-fixed bottom-0 py-2 px-3  d-flex justify-content-between align-items-center ">
+        <div v-if="chatSelezionata" class="message-bar position-fixed bottom-0 py-2 px-3  d-flex justify-content-between align-items-center ">
           <i class="fa-regular fa-face-smile" style="color: #A8B2B7 ;"></i>
-          <input type="text" placeholder="Scrive un messaggio" class="mx-4 ">
+          <input @keyup.enter="addMessage" v-model="message" type="text" placeholder="Scrive un messaggio" class="mx-4 ">
           <i class="fa-solid fa-microphone" style="color: #A8B2B7;"></i>
         </div>
       </div>
