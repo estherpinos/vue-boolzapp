@@ -1,5 +1,7 @@
 const {createApp} = Vue;
 
+
+
 createApp({
   data(){
     return{
@@ -149,7 +151,7 @@ createApp({
         {
             name: 'Davide',
             avatar: 'https://bootdey.com/img/Content/avatar/avatar8.png',
-            visible: false,
+            visible: true,
             messages: [
                 {
                     date: '10/01/2020 15:30:55',
@@ -169,7 +171,7 @@ createApp({
             ],
         }
       ],
-      activeContact: -1,
+      activeContact: -1,   // serve a sapere l'indice dell'oggetto selezionato
       chatSelezionata: false,
       nomeSelezionato: " ",
       ultimoAccesso: " ",
@@ -193,11 +195,14 @@ createApp({
     addMessage(){
       object={
         date: '10/01/2020 15:51:00',
-        message: 'OK!!',
-        status: 'received'
+        message: this.message,
+        status: 'send'
 
       };
       this.contacts[this.activeContact].messages.push(object);
+      this.message="";
+      
+  
     },
 
     searchChat(){
