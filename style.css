@@ -55,6 +55,13 @@ body{
   height: 60px;
 }
 
+.blue-bar .bell-icon{
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
 /* SEARCH BAR */
 .search-bar{
   background-color: white;
