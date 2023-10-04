@@ -74,13 +74,23 @@ body{
   outline: none;
 }
 
-/* UTENTI */
-.user-row{
-  height: 50px;
-  border: 1px solid lightblue;
+/********** UTENTI ***********/
+
+.chat-list{
+  overflow-y: scroll;
+  height: calc(100% - 150px);
 }
 
-.user-row .ultimo-messaggio{
+.active{
+  background-color: lightgray;
+}
+
+.contact{
+  height: 50px;
+  border-bottom: 1px solid lightgray;
+}
+
+.contact .ultimo-messaggio{
   font-size: 10px;
 }
 

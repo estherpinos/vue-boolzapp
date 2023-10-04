@@ -172,10 +172,15 @@ createApp({
   },
   methods:{
 
-
   },
 
+  created(){
+    this.activeContact = this.contacts;
+  },
+
+
   mounted(){
+    
 
   }
 }).mount('#app')
